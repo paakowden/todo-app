@@ -1,4 +1,6 @@
-const firebaseConfig = {
+import firebase from "firebase";
+
+const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyDTmxqwKPj9hnlEIoO34a7mq798JcsErVg",
   authDomain: "todo-app-cp-91209.firebaseapp.com",
   databaseURL: "https://todo-app-cp-91209.firebaseio.com",
@@ -7,4 +9,8 @@ const firebaseConfig = {
   messagingSenderId: "847157336973",
   appId: "1:847157336973:web:2a3c3229be3661a89c3bc4",
   measurementId: "G-WJ3X3PWW3L",
-};
+});
+
+const db = firebaseApp.firestore();
+
+export default db;
